@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Online Learning Platform</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>LearnNow</h1>
+    </header>
+    <main>
+        <section class="course-selection">
+            <h2>Select a Course</h2>
+            <select id="course-dropdown">
+                <option value="math">Math</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+            </select>
+            <button onclick="selectCourse()">Start Course</button>
+        </section>
+        <section class="video-section">
+            <h2>Video Lessons</h2>
+            <video controls id="lesson-video">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="quiz-section">
+            <h2>Quiz</h2>
+            <p id="quiz-question">What is the capital of France?</p>
+            <button onclick="checkAnswer('A')">A. Paris</button>
+            <button onclick="checkAnswer('B')">B. London</button>
+            <button onclick="checkAnswer('C')">C. Berlin</button>
+        </section>
+        <section class="rating-section">
+            <h2>Rate the Lesson</h2>
+            <input type="number" id="rating" placeholder="Rate 1-5" min="1" max="5">
+            <button onclick="submitRating()">Submit Rating</button>
+        </section>
+        <section class="progress-section">
+            <h2>Progress Tracking</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <button onclick="saveProgress()">Save Progress</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 LearnNow</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
